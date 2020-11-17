@@ -1,24 +1,13 @@
-# README
+# Rails Friends App 🚀
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> App that list the Friends of the user
 
-Things you may want to cover:
+[x] Auth => sign up/log in
+[x] Create Friend
+[x] Show Friends
+[x] Delete Friends
+[x] Edit Friends 
 
-* Ruby version
+## Super cool 🔥
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
