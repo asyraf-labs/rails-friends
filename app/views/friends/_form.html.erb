@@ -1,0 +1,108 @@
+<%= form_with(model: friend, local: true) do |form| %>
+  <% if friend.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(friend.errors.count, "error") %> prohibited this friend from being saved:</h2>
+
+      <ul>
+        <% friend.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field is-horizontal">
+  <div class="field-label is-normal">
+    <label class="label"><%= form.label :first_name %></label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <%= form.text_field :first_name , class: "control", placeholder: "John" %>
+    </div>
+  </div>
+</div>
+
+<div class="field is-horizontal">
+  <div class="field-label is-normal">
+    <label class="label"><%= form.label :last_name %></label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <%= form.text_field :last_name , class: "control", placeholder: "Doe"%>
+    </div>
+  </div>
+</div>
+
+<div class="field is-horizontal">
+  <div class="field-label is-normal">
+    <label class="label"><%= form.label :email %></label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <%= form.text_field :email, class: "control" , placeholder: "meh@gmail.com"%>
+    </div>
+  </div>
+</div>
+
+<div class="field is-horizontal">
+  <div class="field-label is-normal">
+    <label class="label"><%= form.label :country %></label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <%= form.text_field :country , class: "control", placeholder: "Malaysia" %>
+    </div>
+  </div>
+</div>
+
+<div class="field is-horizontal">
+  <div class="field-label is-normal">
+    <label class="label"><%= form.label :twitter %></label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <%= form.text_field :twitter , class: "control", placeholder: "@elon " %>
+    </div>
+  </div>
+</div>
+
+<div class="field is-horizontal">
+  <div class="field-label is-normal hidden">
+    <label class="label"><%= form.label :user_id%></label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <%= form.number_field :user_id , id: :friend_user_id , class: "control", value: current_user.id , type: :hidden%>
+    </div>
+  </div>
+</div>
+
+ <!--  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :twitter %>
+    <%= form.text_field :twitter %>
+  </div> -->
+
+  <div class="actions">
+    <%= form.submit class: "button is-primary" %>
+  </div>
+<% end %>
